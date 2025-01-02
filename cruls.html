@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,17 +15,17 @@
         h1, h2 {
             text-align: center;
         }
-        
         h1 {
-            color: #15e0ff;
+            
         }
-        ul {
+        .rules-container {
             background: #fff;
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* শুরুতে লুকানো */
         }
         ul li {
             margin: 10px 0;
@@ -35,16 +34,49 @@
             font-weight: bold;
             color: #ff00dc;
         }
-        
         strong {
             color: #ff000a;
+        }
+        .show-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .show-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Muslim Spamming & Cyber Squad</h1>
-    <h2 style=" color: red;">নিয়মাবলি</h2>
-    <ul>
+    <table>
+        <tr>
+    <h3 style=" color: #ff15e7;">প্রত্যেকটি প্রতিষ্ঠানের একটি নিয়মাবলি বা রুলস থাকে,
+
+তেমনি আমাদের (Muslim Spamming & Cyber Squad) এর একটি নিয়মাবলি বা রুলস আছে।
+
+নিচে আমাদের টিমের নিয়মাবলি এবং রুলস দেওয়া হয়েছে। পড়ে নিবেন সবাই প্রিয়</h3>
+
+</tr>
+</td>
+</table>
+
+
+    <!-- Show/Hide Button -->
+    <button class="show-button" id="toggle-button" onclick="toggleContent()">নিয়মাবলী</button>
+
+   
+   
+   
+   
+    <!-- Rules Container -->
+    <div class="rules-container" id="rules-container">
+        <ul>
         <li><strong>TEXT OFF/টেক্সট অফ</strong> ঘোষণার পর কোনো মেম্বার টেক্সট করবেন না। নিয়ম ভাঙলে রিমুভ করা হতে পারে। <span class="note">(এডমিন ও ট্রেইনাররা টেক্সট করতে পারবেন)</span></li>
         <li>ট্রেইনার ভাইদের কথার উপরে কথা বলবেন না। সব সময় ভদ্রতা বজায় রাখবেন। অতিরিক্ত বাড়াবাড়ি দূরত্বের কারণ।</li>
         <li>কেউ এডমিন প্যানেলে হাত দিবেন না! গ্রুপে কোনো কিছু পরিবর্তন করবেন না। কোনো লিংক দিবেন না(পোস্ট লিংক বাদে) <span class="note">Be Carful Brothers.....</span></li>
@@ -83,6 +115,23 @@
         <li> Sub = সাভমিট</li>
     </ul>
 
-    <h3 style="color: red;">বিঃদ্রঃ সময় অনুযায়ী নিয়মাবলিতে পরিবর্তন আনা হতে পারে। উপরোক্ত নির্দেশিকা কমপক্ষে ১০ বার মনোযোগ সহকারে পড়ে রিয়েক্ট দিন।এটা বাধ্যতামূলক </h3>
+    <h3 style="color: red;">বিঃদ্রঃ যে কোন সময় এই নিয়মাবলি পরিবর্তন পরিমার্জন করার অধিকার রাখে MSCS কতৃপক্ষ </h3>
+    <h2 style="color:#1100ff">নোট : কম-করে হলেও ১০ বার পড়বেন।</h2>
+    </div>
+
+    <script>
+        function toggleContent() {
+            const rulesContainer = document.getElementById('rules-container');
+            const toggleButton = document.getElementById('toggle-button');
+
+            if (rulesContainer.style.display === 'none' || rulesContainer.style.display === '') {
+                rulesContainer.style.display = 'block';
+                toggleButton.textContent = '❌❌❌'; // বাটনের টেক্সট পরিবর্তন
+            } else {
+                rulesContainer.style.display = 'none';
+                toggleButton.textContent = 'Show Rules'; // বাটনের টেক্সট পরিবর্তন
+            }
+        }
+    </script>
 </body>
 </html>
